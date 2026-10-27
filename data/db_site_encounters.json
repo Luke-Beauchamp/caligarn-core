@@ -1,0 +1,46 @@
+[
+  {
+    "site_id": "site_05_mudflats_boss",
+    "display_name": "The Silt-Gorged Reach (Site 05)",
+    "biome_type": "Toxic_Brine_Basin",
+    "is_boss_encounter": true,
+    "wave_count": 10,
+    "environmental_hazards": [
+      {
+        "hazard_type": "Corrosive_River_Vent",
+        "affects": "Both_Structures_And_Actors",
+        "interval_sec": 14.0,
+        "yields_resource_on_tap": "Vapour"
+      }
+    ],
+    "boss_profile": {
+      "boss_unit_id": "boss_silt_gorged_burrower",
+      "name": "The Silt-Gorged Burrower",
+      "hitpoints": 14000,
+      "armor_rating": 25,
+      "structural_threat_vector": "Subterranean_Breach",
+      "boss_break_events": [
+        {
+          "trigger_hp_threshold": 0.66,
+          "event_name": "Seismic_Fault_Rupture",
+          "action": "Destroys_All_Traps_In_Radius_4_Tiles",
+          "terrain_alteration": "Spawns_Permanent_Silt_Chasm",
+          "sfx_cue": "sfx_earthquake_sub_bass.wav"
+        },
+        {
+          "trigger_hp_threshold": 0.33,
+          "event_name": "Mud_Geyser_Eruption",
+          "action": "Disables_Conduit_Power_For_12_Sec",
+          "terrain_alteration": "Extinguishes_Thermal_Puddles",
+          "sfx_cue": "sfx_liquid_geyser_blast.wav"
+        }
+      ]
+    },
+    "site_asset_manifest": {
+      "tilemap_tmx": "tilemaps/site_05_silt_reach.tmx",
+      "tile_palette_png": "sprites/tiles/brine_mudflat_palette.png",
+      "background_ambience": "audio/ambience/amb_toxic_marsh_wind.ogg",
+      "boss_theme_track": "audio/music/mus_burrower_clash.ogg"
+    }
+  }
+]

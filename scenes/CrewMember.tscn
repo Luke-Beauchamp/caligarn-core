@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bv0w56ygeui22"]
+
+[ext_resource type="Script" uid="uid://bjv6bjolnspc" path="res://scripts/entities/CrewMember.gd" id="1_phryv"]
+[ext_resource type="Script" uid="uid://c6ii5rp7l1pgt" path="res://scripts/entities/behavior/BehaviorBrain.gd" id="1_ycu3g"]
+[ext_resource type="Script" uid="uid://c7loxq34ftn1p" path="res://scripts/entities/behavior/StanceController.gd" id="2_2b6s5"]
+[ext_resource type="Texture2D" uid="uid://c3x1haisppjxf" path="res://icon.svg" id="2_6od4a"]
+[ext_resource type="Script" uid="uid://gediy3ohy646" path="res://scripts/entities/behavior/DirectiveEvaluator.gd" id="4_6od4a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wibp7"]
+radius = 8.0
+
+[node name="CrewMember" type="CharacterBody2D" unique_id=658413218]
+script = ExtResource("1_phryv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=955597793]
+shape = SubResource("CircleShape2D_wibp7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=704872856]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_6od4a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=470453729]
+
+[node name="BehaviorBrain" type="Node" parent="." unique_id=475519167]
+script = ExtResource("1_ycu3g")
+
+[node name="StanceController" type="Node" parent="." unique_id=159973446]
+script = ExtResource("2_2b6s5")
+
+[node name="DirectiveEvaluator" type="Node" parent="." unique_id=2091911885]
+script = ExtResource("4_6od4a")
+
+[node name="EvaluationTimer" type="Timer" parent="." unique_id=1181057008]
+wait_time = 0.2
+autostart = true

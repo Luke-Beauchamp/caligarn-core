@@ -1,0 +1,92 @@
+{
+  "stances": [
+    {
+      "stance_id": "stance_bulwark",
+      "display_name": "Bulwark Anchor",
+      "leash_anchor_target": "Faevalcade_Ramp_Or_Highest_Tier_Wall",
+      "max_leash_distance_tiles": 3.5,
+      "movement_heuristic": "Defend_Chokepoints",
+      "fallback_threshold_hp": 0.15,
+      "icon_asset": "ui/icons/stances/icon_stance_bulwark.png"
+    },
+    {
+      "stance_id": "stance_roamer",
+      "display_name": "Free Scavenger",
+      "leash_anchor_target": "Dynamic_Loose_Resource_Clusters",
+      "max_leash_distance_tiles": 12.0,
+      "movement_heuristic": "Flank_And_Collect",
+      "fallback_threshold_hp": 0.35,
+      "icon_asset": "ui/icons/stances/icon_stance_roamer.png"
+    }
+  ],
+  "directives": [
+    {
+      "directive_id": "dir_choke_stitcher",
+      "display_name": "Choke-Stitcher",
+      "trigger_condition": {
+        "target_entity": "Structure_Wall",
+        "eval_parameter": "HP_Percentage",
+        "comparison_operator": "LESS_THAN",
+        "threshold_value": 0.30
+      },
+      "action_payload": {
+        "action_type": "Channel_Physical_Bracing",
+        "duration_sec": 4.0,
+        "resource_consumed": "Slag",
+        "resource_cost_per_sec": 2,
+        "effect_applied": "Damage_Mitigation_50_Percent"
+      },
+      "icon_asset": "ui/icons/directives/icon_dir_choke_stitch.png"
+    },
+    {
+      "directive_id": "dir_field_salvage",
+      "display_name": "Rapid Reclamation",
+      "trigger_condition": {
+        "target_entity": "Ground_Drop_Resource",
+        "eval_parameter": "Map_Count",
+        "comparison_operator": "GREATER_THAN",
+        "threshold_value": 0
+      },
+      "action_payload": {
+        "action_type": "Dash_And_Collect",
+        "duration_sec": 0.0,
+        "resource_consumed": "None",
+        "resource_cost_per_sec": 0,
+        "effect_applied": "Temporary_Speed_Buff_15_Percent"
+      },
+      "icon_asset": "ui/icons/directives/icon_dir_salvage.png"
+    }
+  ],
+  "quirks": [
+    {
+      "quirk_id": "quirk_foundry_stubbornness",
+      "display_name": "Foundry Stubbornness",
+      "trigger_event": "Perimeter_Hull_Breach",
+      "stress_cost": 25,
+      "behavioral_override": {
+        "override_stance": "stance_bulwark",
+        "ignore_retreat_pings": true,
+        "stat_modifiers": {
+          "damage_resistance_pct": 0.40,
+          "repair_speed_pct": -0.50
+        }
+      },
+      "ledger_entry_text": "Will not yield the gate, even as molten slag boils his boots."
+    },
+    {
+      "quirk_id": "quirk_obsessive_magpie",
+      "display_name": "Scrap-Blindness",
+      "trigger_event": "Wave_Active_High_Salvage",
+      "stress_cost": 15,
+      "behavioral_override": {
+        "override_targeting": "Prioritize_Salvage_Over_Combat",
+        "ignore_retreat_pings": false,
+        "stat_modifiers": {
+          "move_speed_pct": 0.30,
+          "incoming_damage_taken_pct": 0.20
+        }
+      },
+      "ledger_entry_text": "Darts directly through crossfire if brass cogs glint in the mud."
+    }
+  ]
+}

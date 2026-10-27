@@ -1,0 +1,110 @@
+[
+  {
+	"unit_id": "crew_lead_kaelen",
+	"role_type": "Team_Lead",
+	"name": "Iron-Lung Kaelen",
+	"lineage_race": "Slag_Forged_Human",
+	"base_stats": {
+	  "max_health": 650,
+	  "move_speed_tiles_per_sec": 1.8,
+	  "base_kinetic_damage": 38,
+	  "attack_cooldown_sec": 1.2,
+	  "repair_efficiency": 1.5,
+	  "mass_weight_class": "Heavy_Anchor"
+	},
+	"behavior_defaults": {
+	  "locked_stance": "stance_bulwark",
+	  "directive_capacity": 3,
+	  "default_directives": [
+		"dir_fortify_perimeter",
+        "dir_choke_stitcher"
+	  ],
+	  "innate_quirk_id": "quirk_foundry_stubbornness"
+	},
+	"signature_rule_breaker": {
+	  "passive_id": "rule_kinetic_symbiosis",
+	  "description": "Structures within 3 tiles convert damage taken into +30% attack speed.",
+	  "exclusive_blueprint_morph": "morph_kaelen_smelt_furnace"
+	},
+	"asset_manifest": {
+	  "sprite_sheet": "sprites/actors/leads/kaelen_walk_attack_sheet.png",
+	  "ui_portrait_headshot": "ui/portraits/portrait_kaelen_neutral.png",
+	  "ui_portrait_stressed": "ui/portraits/portrait_kaelen_overheat.png",
+	  "ledger_silhouette": "ui/ledger/stamps/stamp_kaelen_silhouette.png",
+	  "bellows_particle_fx": "vfx/particles/fx_kaelen_soot_exhaust.prefab",
+	  "vo_chatter_bank": "audio/banter/bank_kaelen_dialogue.json"
+	}
+  },
+  {
+	"unit_id": "crew_lead_corvo",
+	"role_type": "Team_Lead",
+	"name": "Scrap-Beak Corvo",
+	"lineage_race": "Corvidae_Wildlander",
+	"base_stats": {
+	  "max_health": 320,
+	  "move_speed_tiles_per_sec": 3.4,
+	  "base_kinetic_damage": 18,
+	  "attack_cooldown_sec": 0.6,
+	  "repair_efficiency": 0.75,
+	  "mass_weight_class": "Light_Skirmisher"
+	},
+	"behavior_defaults": {
+	  "locked_stance": "stance_roamer",
+	  "directive_capacity": 4,
+	  "default_directives": [
+		"dir_field_salvage",
+        "dir_opportunist"
+	  ],
+	  "innate_quirk_id": "quirk_obsessive_magpie"
+	},
+	"signature_rule_breaker": {
+	  "passive_id": "rule_expendable_logistics",
+	  "description": "Destroyed traps explode into free scrap piles and stun nearby enemies.",
+	  "exclusive_blueprint_morph": "morph_corvo_scythe_deadfall"
+	},
+	"asset_manifest": {
+	  "sprite_sheet": "sprites/actors/leads/corvo_walk_attack_sheet.png",
+	  "ui_portrait_headshot": "ui/portraits/portrait_corvo_neutral.png",
+	  "ui_portrait_stressed": "ui/portraits/portrait_corvo_panic.png",
+	  "ledger_silhouette": "ui/ledger/stamps/stamp_corvo_silhouette.png",
+	  "feather_particle_fx": "vfx/particles/fx_corvo_feather_burst.prefab",
+	  "vo_chatter_bank": "audio/banter/bank_corvo_dialogue.json"
+	}
+  },
+{
+	"unit_id": "crew_lead_vespera",
+	"role_type": "Team_Lead",
+	"name": "Vespera Vane",
+	"lineage_race": "Conduit_Tethered_Elf",
+	"base_stats": {
+	  "max_health": 280,
+	  "move_speed_tiles_per_sec": 2.4,
+	  "base_kinetic_damage": 22,
+	  "attack_cooldown_sec": 0.9,
+	  "repair_efficiency": 1.1,
+	  "mass_weight_class": "Medium_Support"
+	},
+	"behavior_defaults": {
+	  "locked_stance": "stance_skirmisher",
+	  "directive_capacity": 3,
+	  "default_directives": [
+		"dir_manage_flow",
+        "dir_high_density"
+	  ],
+	  "innate_quirk_id": "quirk_conduit_burn"
+	},
+	"signature_rule_breaker": {
+	  "passive_id": "rule_grid_weaver",
+	  "description": "Turrets link through active conduit beams; crossing beams incinerates low-tier creeps.",
+	  "exclusive_blueprint_morph": "morph_vespera_resonance_pylon"
+	},
+	"asset_manifest": {
+	  "sprite_sheet": "sprites/actors/leads/vespera_walk_attack_sheet.png",
+	  "ui_portrait_headshot": "ui/portraits/portrait_vespera_neutral.png",
+	  "ui_portrait_stressed": "ui/portraits/portrait_vespera_overload.png",
+	  "ledger_silhouette": "ui/ledger/stamps/stamp_vespera_silhouette.png",
+	  "resonance_spark_fx": "vfx/particles/fx_vespera_arc_coil.prefab",
+	  "vo_chatter_bank": "audio/banter/bank_vespera_dialogue.json"
+	}
+  }
+]

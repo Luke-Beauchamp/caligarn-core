@@ -1,0 +1,113 @@
+[
+  {
+    "blueprint_id": "bp_slag_spigot_base",
+    "name": "Slag Spigot",
+    "category": "Kinetic_Turret",
+    "tier": 1,
+    "footprint": { "width": 1, "height": 1 },
+    "costs": {
+      "slag_build": 45,
+      "vapour_build": 10,
+      "vapour_upkeep_per_wave": 0
+    },
+    "durability": {
+      "max_hp": 350,
+      "armor_rating": 5,
+      "fatigue_decay_rate": 0.05,
+      "can_self_reset": false,
+      "reset_cooldown_sec": 0.0
+    },
+    "combat_metrics": {
+      "range_tiles": 3.0,
+      "targeting_type": "Cone_Spray",
+      "base_dps": 22.0,
+      "status_applied": "Thermal_Burn",
+      "overdrive_threshold": 0.30
+    },
+    "asset_manifest": {
+      "sprite_sheet": "sprites/structures/turret_slag_spigot_sheet.png",
+      "idle_frame_indices": [0, 1, 2, 3],
+      "firing_frame_indices": [4, 5, 6, 7],
+      "critical_damaged_frame": 8,
+      "destroyed_debris_frame": 9,
+      "emission_map": "sprites/structures/turret_slag_spigot_emission.png",
+      "sfx_fire": "sfx_spigot_hiss_spray.wav",
+      "sfx_break": "sfx_metal_buckle_steam.wav"
+    },
+    "lead_morph_id": "morph_kaelen_smelt_furnace"
+  },
+  {
+    "blueprint_id": "bp_capacitor_needle_base",
+    "name": "Capacitor Needle",
+    "category": "Conduit_Pylon",
+    "tier": 1,
+    "footprint": { "width": 1, "height": 1 },
+    "costs": {
+      "slag_build": 30,
+      "vapour_build": 40,
+      "vapour_upkeep_per_wave": 8
+    },
+    "durability": {
+      "max_hp": 180,
+      "armor_rating": 2,
+      "fatigue_decay_rate": 0.12,
+      "can_self_reset": false,
+      "reset_cooldown_sec": 0.0
+    },
+    "combat_metrics": {
+      "range_tiles": 5.5,
+      "targeting_type": "Linear_Tether",
+      "base_dps": 18.0,
+      "status_applied": "Galvanized",
+      "overdrive_threshold": 0.0
+    },
+    "asset_manifest": {
+      "sprite_sheet": "sprites/structures/pylon_capacitor_needle_sheet.png",
+      "idle_frame_indices": [0, 1, 2, 3, 4, 5],
+      "firing_frame_indices": [6, 7, 8],
+      "critical_damaged_frame": 9,
+      "destroyed_debris_frame": 10,
+      "emission_map": "sprites/structures/pylon_capacitor_needle_emission.png",
+      "sfx_fire": "sfx_arc_discharge_snap.wav",
+      "sfx_break": "sfx_glass_crystal_shatter.wav"
+    },
+    "lead_morph_id": "morph_vespera_resonance_pylon"
+  },
+  {
+    "blueprint_id": "bp_rotary_snare_base",
+    "name": "Rotary Snare-Rig",
+    "category": "Autonomous_Trap",
+    "tier": 1,
+    "footprint": { "width": 1, "height": 1 },
+    "costs": {
+      "slag_build": 35,
+      "vapour_build": 5,
+      "vapour_upkeep_per_wave": 0
+    },
+    "durability": {
+      "max_hp": 120,
+      "armor_rating": 8,
+      "fatigue_decay_rate": 0.0,
+      "can_self_reset": true,
+      "reset_cooldown_sec": 6.5
+    },
+    "combat_metrics": {
+      "range_tiles": 0.5,
+      "targeting_type": "Pressure_Plate",
+      "base_dps": 40.0,
+      "status_applied": "Root_And_Shred",
+      "overdrive_threshold": 0.0
+    },
+    "asset_manifest": {
+      "sprite_sheet": "sprites/structures/trap_rotary_snare_sheet.png",
+      "idle_frame_indices": [0],
+      "firing_frame_indices": [1, 2, 3],
+      "critical_damaged_frame": 4,
+      "destroyed_debris_frame": 5,
+      "emission_map": null,
+      "sfx_fire": "sfx_steel_bear_trap_snap.wav",
+      "sfx_break": "sfx_spring_unwind_fail.wav"
+    },
+    "lead_morph_id": "morph_corvo_scythe_deadfall"
+  }
+]

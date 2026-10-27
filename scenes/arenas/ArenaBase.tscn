@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://hte7ck3p3e1l"]
+
+[ext_resource type="Script" uid="uid://ckkagamdctt6j" path="res://scripts/arena/ArenaGridManager.gd" id="1_jxrir"]
+[ext_resource type="PackedScene" uid="uid://bv0w56ygeui22" path="res://scenes/CrewMember.tscn" id="1_xeilo"]
+
+[node name="ArenaBase" type="Node2D" unique_id=1304531603]
+script = ExtResource("1_jxrir")
+
+[node name="Entities" type="Node2D" parent="." unique_id=41628518]
+
+[node name="CrewMember" parent="Entities" unique_id=1112244084 instance=ExtResource("1_xeilo")]
+position = Vector2(320, 180)
+
+[node name="Structures" type="Node2D" parent="." unique_id=1264213215]
+
+[node name="FaevalcadeRamp" type="Marker2D" parent="Structures" unique_id=783689852 groups=["Faevalcade_Ramp"]]
+position = Vector2(96, 180)
